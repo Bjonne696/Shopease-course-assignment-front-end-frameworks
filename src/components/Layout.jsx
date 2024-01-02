@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
+import Footer from './Footer';
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const Layout = ({ children }) => (
   <LayoutWrapper>
     <Header />
     <Main>{children}</Main>
+    <Footer />
   </LayoutWrapper>
 );
 
