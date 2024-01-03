@@ -4,7 +4,8 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import ContactPage from './pages/ContactPage';
-import CheckoutPage from './pages/CheckoutPage'; // Import the CartPage
+import CartPage from './pages/CartPage';
+import CheckoutSuccessPage from './pages/CheckoutSuccessPage'; // Import this
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products/:productId" element={<ProductPage />} /> {/* Dynamic route for products */}
+          <Route path="/products/:productId" element={<ProductPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} /> {/* Add CheckoutPage route */}
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkoutsuccess" element={<CheckoutSuccessPage />} /> {/* Add this line */}
           {/* Add more routes as needed */}
         </Routes>
       </Layout>
@@ -23,6 +25,3 @@ function App() {
 }
 
 export default App;
-
-
-

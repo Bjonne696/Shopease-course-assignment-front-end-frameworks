@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../features/cart/cartSlice';  // Adjust this path if necessary
 
 const ProductPage = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`https://api.noroff.dev/api/v1/online-shop/${productId}`)
@@ -16,9 +19,9 @@ const ProductPage = () => {
     return <div>Loading product...</div>;
   }
 
-  // Function to handle adding product to cart
-  const addToCart = () => {
-    // Implement your logic to add product to cart
+  // Updated function to handle adding product to cart
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
     console.log('Product added to cart:', product.title);
   };
 
@@ -33,12 +36,12 @@ const ProductPage = () => {
       <p>{product.description}</p>
       <p>Price: ${product.discountedPrice}</p>
       {discount > 0 && <p>Discount: {discount}% off</p>}
-      <button onClick={addToCart}>Add to Cart</button>
+      <button onClick={handleAddToCart}>Add to Cart</button>
       <h3>Reviews:</h3>
       {product.reviews && product.reviews.length > 0 ? (
-        product.reviews.map(reviews => (
-          <div key={reviews.id}>
-            <p><strong>{reviews.username}</strong>: {reviews.description} <em>(Rating: {reviews.rating}/5)</em></p>
+        product.reviews.map(review => (
+          <div key={review.id}>
+            <p><strong>{review.username}</strong>: {review.description} <em>(Rating: {review.rating}/5)</em></p>
           </div>
         ))
       ) : (
