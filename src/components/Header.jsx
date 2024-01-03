@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import styled from 'styled-components';
 import CartIcon from './CartIcon';
+import { useSelector } from 'react-redux'; // Import useSelector from 'react-redux'
+
 
 const HeaderWrapper = styled.header`
   background: lightgreen; 
@@ -38,12 +40,13 @@ const NavLink = styled.a`
 
 
 const Header = () => {
-  const navigate = useNavigate(); // Initialize useNavigate here
-  const itemCount = 5;
+  const navigate = useNavigate();
+  const cartItems = useSelector((state) => state.cart.items); // Access the cart items from the store
 
-  // Function to handle CartIcon click
+  const itemCount = cartItems.length; // Calculate the number of items
+
   const handleCartClick = () => {
-    navigate('/checkout'); // Use navigate to change the route
+    navigate('/checkout'); // Navigate to CheckoutPage
   };
 
   return (

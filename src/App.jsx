@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import ContactPage from './pages/ContactPage';
-import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage';
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage'; // Import this
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/products/:productId" element={<ProductPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/checkoutsuccess" element={<CheckoutSuccessPage />} /> {/* Add this line */}
           {/* Add more routes as needed */}
         </Routes>
