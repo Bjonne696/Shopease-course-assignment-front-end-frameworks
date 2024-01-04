@@ -63,9 +63,11 @@ const HomePage = () => {
   };
 
   // Filtering products based on the search term
-  const filteredProducts = products.filter(product =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+   const filteredProducts = products.filter(product => {
+    const titleMatch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const tagsMatch = product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return searchTerm === '' || titleMatch || tagsMatch;
+  });
 
   // Rendering the component
   return (
@@ -82,9 +84,14 @@ const HomePage = () => {
         <ProductCard key={product.id}>
           <h3>{product.title}</h3>
           <ProductImage src={product.imageUrl} alt={product.title} />
+          <p>Description:</p>
           <p>{product.description}</p>
+          <p>Tags:</p>
+          {/* Displaying product tags individually */}
+          {product.tags && product.tags.map(tag => (
+            <p key={tag}>{tag}</p> // Each tag as a separate paragraph
+          ))}
           <p>Price: ${product.price}</p>
-          {/* Link to navigate to the product's individual page */}
           <StyledLink to={`/products/${product.id}`}>View Product</StyledLink>
         </ProductCard>
       ))}
@@ -93,3 +100,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

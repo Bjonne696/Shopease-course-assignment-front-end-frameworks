@@ -49,22 +49,24 @@ const Header = () => {
     navigate('/checkout'); // Navigate to CheckoutPage
   };
 
+
+
   return (
     <HeaderWrapper>
       <Navigation>
         <h1>My eCom Store</h1>
-        <div>
-          <NavList>
-            <NavItem><NavLink href="/">Home</NavLink></NavItem>
-            <NavItem><NavLink href="/products">Products</NavLink></NavItem>
-            <NavItem><NavLink href="/contact">Contact</NavLink></NavItem>
-            {/* Add more navigation items as needed */}
-          </NavList>
-          <CartIcon itemCount={itemCount} onClick={handleCartClick} /> {/* Pass handleCartClick to CartIcon */}
-        </div>
+        <NavList>
+        <NavItem>
+            <CartIcon itemCount={itemCount} onClick={handleCartClick} />
+          </NavItem>
+          <NavItem><NavLink href="/">Home</NavLink></NavItem>
+          <NavItem><NavLink href="/contact">Contact</NavLink></NavItem>
+          {/* Add more navigation items as needed */}
+          {/* Wrap CartIcon in NavItem for styling consistency */}
+        </NavList>
       </Navigation>
     </HeaderWrapper>
   );
-};
+}
 
 export default Header;
