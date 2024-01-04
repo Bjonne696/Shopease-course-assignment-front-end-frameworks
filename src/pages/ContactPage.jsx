@@ -1,66 +1,10 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import styled from 'styled-components';
+import { Button } from '../styles/ButtonStyles';
+import { Form, FormField, Label, Input, TextArea } from '../styles/ContactFormStyles';
+import { ErrorMessage, SuccessMessage } from '../styles/ConfirmationMessageStyles';
 
-// Styled components
-const Form = styled.form`
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f8f8f8;
-`;
 
-const FormField = styled.div`
-  margin-bottom: 10px;
-`;
-
-const Label = styled.label`
-  display: block;
-  margin-bottom: 5px;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-`;
-
-const TextArea = styled.textarea`
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-`;
-
-const ErrorMessage = styled.p`
-  color: red;
-  font-size: 0.875em;
-  margin-top: 5px;
-`;
-
-const SubmitButton = styled.button`
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
-
-const SuccessMessage = styled.p`
-  color: green;
-`;
-
-// ContactPage component
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
   const {
@@ -105,7 +49,7 @@ const ContactPage = () => {
           {errors.body && <ErrorMessage>Message body is required (min 3 characters).</ErrorMessage>}
         </FormField>
 
-        <SubmitButton type="submit">Submit</SubmitButton>
+        <Button type="submit">Submit</Button>
       </Form>
     </div>
   );

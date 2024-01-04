@@ -6,10 +6,10 @@ const CheckoutPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
 
-  // Calculate total price
+
   const totalPrice = cartItems.reduce((total, item) => total + item.discountedPrice, 0);
 
-  // Handle checkout button click
+
   const handleCheckout = () => {
     navigate('/checkoutsuccess');
   };

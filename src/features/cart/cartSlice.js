@@ -17,7 +17,6 @@ export const cartSlice = createSlice({
     clearCart: (state) => {
       state.items = [];
     },
-    // You can add more reducers as needed.
   },
 });
 

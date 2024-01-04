@@ -7,7 +7,6 @@ const CheckoutSuccessPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Clear the cart items
     dispatch(clearCart());
   }, [dispatch]);
 

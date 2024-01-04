@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../features/cart/cartSlice';  // Adjust this path if necessary
+import { addToCart } from '../features/cart/cartSlice';  
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -19,7 +19,7 @@ const ProductPage = () => {
     return <div>Loading product...</div>;
   }
 
-  // Updated function to handle adding product to cart
+  // Handle adding product to cart
   const handleAddToCart = () => {
     dispatch(addToCart(product));
     console.log('Product added to cart:', product.title);
@@ -52,25 +52,3 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
-
-// Explanation for the return statement in ProductPage
-
-/*
-  - The 'return' statement renders the JSX for the ProductPage component.
-  - It first checks if the 'product' object is null. If it is, it displays a loading message.
-  - Once the product data is available (i.e., product is not null), it proceeds to render the product details.
-
-  - The product's title and image are displayed at the top.
-  - The product's description is shown under the image.
-  - The product's price is displayed, and if there is a discount (calculated earlier), it's shown as well.
-  - An 'Add to Cart' button is included, which calls the 'addToCart' function when clicked.
-
-  - Following the product details, the reviews section begins:
-    - It checks if there are reviews in the 'product.reviews' array.
-    - If there are reviews, it maps over the 'reviews' array and creates a div for each review.
-      - Each review shows the username, the review text, and the rating.
-    - If there are no reviews, it displays a message indicating that no reviews are available.
-  
-  - The 'key' prop in the map function is crucial for helping React identify which items have changed, 
-    are added, or are removed, which optimizes rendering performance.
-*/

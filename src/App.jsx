@@ -16,8 +16,7 @@ function App() {
           <Route path="/products/:productId" element={<ProductPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/checkoutsuccess" element={<CheckoutSuccessPage />} /> {/* Add this line */}
-          {/* Add more routes as needed */}
+          <Route path="/checkoutsuccess" element={<CheckoutSuccessPage />} />
         </Routes>
       </Layout>
     </Router>
