@@ -2,22 +2,43 @@ import styled from "styled-components";
 
 
 export const ProductCard = styled.div`
-border: 1px solid #ddd; // Border for the card
-padding: 10px; // Padding inside the card
-margin: 10px; // Margin around each card
-text-align: center; // Centering the text inside the card
+  background-color: #FFFA72;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  max-width: 360px;
+  border-radius: 10px;
+  height: 500px; 
 `;
 
 
 export const ProductImage = styled.img`
-max-width: 100%; // Maximum width is the full width of the container
-height: auto; // Height is set automatically to maintain aspect ratio
+  width: 100%; 
+  height: auto; 
+  object-fit: contain;
+  max-height: 200px;
+  border-radius: 10px;
+  background-color: #FFFA72; 
 `;
 
-
 export const SearchBar = styled.input`
-width: 100%; // The search bar takes the full width of its container
-padding: 10px; // Padding inside the search bar
-margin: 10px 0; // Margin above and below the search bar
-box-sizing: border-box; // Ensures padding does not increase the size of the box
+  display: block;
+  width: 80%;
+  margin: 0 auto; 
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+export const Heading = styled.h2`
+text-align: center;
+margin-top: 120px; 
+`;
+
+export const Paragraph = styled.p`
+text-align: center;
+margin: 60px 40px 20px 60px; 
 `;

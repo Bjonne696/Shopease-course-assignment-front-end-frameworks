@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 export const Icon = styled.img`
-  width: 24px; // Adjust the size as needed
+  width: 24px; 
   height: auto;
 `;
 
