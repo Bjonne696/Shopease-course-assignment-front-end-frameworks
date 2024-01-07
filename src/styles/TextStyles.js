@@ -29,14 +29,14 @@ font-family: becker-gothics-egyptian, sans-serif;
 export const ProductDescription = styled.p`
 font-family: becker-gothics-egyptian, sans-serif;
 font-size: 2rem;
-margin: 15px;
+margin: 10px;
 padding: 0;
 font-size: 10px;
 `;
 
 export const ProductTitle = styled.h3`
 font-family: becker-gothics-concave, sans-serif;
-margin: 15px;
+margin: 10px;
 padding: 0;
 text-align: center;
 font-size: 1.20rem;
