@@ -33,12 +33,3 @@ export const SearchBar = styled.input`
   border-radius: 5px;
 `;
 
-export const Heading = styled.h2`
-text-align: center;
-margin-top: 120px; 
-`;
-
-export const Paragraph = styled.p`
-text-align: center;
-margin: 60px 40px 20px 60px; 
-`;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ProductCard, ProductImage, SearchBar, Heading, Paragraph } from '../styles/HomePageStyles';
+import { ProductCard, ProductImage, SearchBar } from '../styles/HomePageStyles';
 import { StyledLink } from '../styles/LinkStyles';
 import { ProductsContainer, ProductTextContainer, ProductImageContainer, ProductButtonContainer } from '../styles/ContainerStyles';
-
+import { Heading, Paragraph, ProductDescription, ProductTitle } from '../styles/TextStyles';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -28,10 +28,10 @@ const HomePage = () => {
   return (
     <div>
             
-    <Heading>Lorem ipsum</Heading>
-    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-     Aliquet eget sit amet tellus cras adipiscing enim. Habitant morbi tristique senectus et netus et malesuada fames. 
-     A cras semper auctor neque vitae. Id volutpat lacus laoreet non curabitur.</Paragraph>
+    <Heading>Welcome to ShopEase</Heading>
+    <Paragraph>This project presents the conceptualization and design of a hypothetical e-commerce website, named "ShopEase". 
+      The purpose of ShopEase is to provide a user-friendly online platform where customers can effortlessly browse and purchase a wide range of products, from electronics to clothing. 
+      The website aims to combine efficient functionality with an engaging user experience, catering to the needs of a diverse customer base.</Paragraph>
 
     <SearchBar
         type="text"
@@ -46,8 +46,8 @@ const HomePage = () => {
         <ProductImage src={product.imageUrl} alt={product.title} />
       </ProductImageContainer>
       <ProductTextContainer>
-        <h3>{product.title}</h3>
-        <p>{product.description}</p>
+        <ProductTitle>{product.title}</ProductTitle>
+        <ProductDescription>{product.description}</ProductDescription>
         {product.tags.map(tag => <p key={tag}>{tag}</p>)}
         <p>Price: ${product.price}</p>
       </ProductTextContainer>

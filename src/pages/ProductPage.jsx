@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../features/cart/cartSlice';
 import { ProductContainer, ReviewsContainer } from "../styles/ContainerStyles";
-import { ProductTitle, Review, ProductImage, ProductDescription, Discount, Price } from "../styles/ProductPageStyles";
-import { Button } from "../styles/ButtonStyles";  
+import {  ProductImage,  } from "../styles/ProductPageStyles";
+import { Button } from "../styles/ButtonStyles";
+import { ProductDescription, Discount, Price, ProductTitle, Review } from '../styles/TextStyles';
 
 const ProductPage = () => {
   const { productId } = useParams();

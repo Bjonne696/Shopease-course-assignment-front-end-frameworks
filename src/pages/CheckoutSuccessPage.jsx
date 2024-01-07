@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { clearCart } from '../features/cart/cartSlice';
-import { SuccessContainer } from '../styles/ContainerStyles';
-import { SuccessHeading } from '../styles/CheckoutSuccessStyles'; 
+import { SuccessContainer } from '../styles/ContainerStyles'; 
 import { StyledLink } from '../styles/LinkStyles';
 import { SuccessMessage } from '../styles/ConfirmationMessageStyles';
+import { SuccessHeading } from '../styles/TextStyles';
 
 const CheckoutSuccessPage = () => {
   const dispatch = useDispatch();

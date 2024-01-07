@@ -20,12 +20,12 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Navigation>
-        <h1>My eCom Store</h1>
+        <h1>ShopEase</h1>
         <NavList>
         <NavItem>
             <CartIcon itemCount={itemCount} onClick={handleCartClick} />
           </NavItem>
-          <NavItem><NavLink href="/">Home</NavLink></NavItem>
+          <NavItem><NavLink href="/">ShopEase</NavLink></NavItem>
           <NavItem><NavLink href="/contact">Contact</NavLink></NavItem>
         </NavList>
       </Navigation>
