@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 import { HeaderContainer } from '../styles/ContainerStyles';
 import { Navigation, NavList, NavItem } from '../styles/NavigationStyles';
 import CartIcon from './CartIcon';
@@ -18,10 +18,10 @@ const Header = () => {
             <CartIcon itemCount={itemCount} onClick={() => navigate('/checkout')} />
           </NavItem>
           <NavItem>
-            <Link to="/">ShopEase</Link> 
+            <Link to="/">ShopEase</Link>
           </NavItem>
           <NavItem>
-            <Link to="/ContactPage">Contact</Link> 
+            <Link to="/contact">Contact</Link>
           </NavItem>
         </NavList>
       </Navigation>
