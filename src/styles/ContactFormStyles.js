@@ -7,7 +7,17 @@ export const Form = styled.form`
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f8f8f8;
+  background-color: #FFFA72;
+  margin-top: 60px; 
+  margin-bottom: 60px; 
+
+  // Responsive design
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 15px;
+    margin-top: 50 px; 
+    margin-bottom: 50 px; 
+  }
 `;
 
 export const FormField = styled.div`

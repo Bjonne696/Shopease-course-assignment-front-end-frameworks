@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '../styles/ButtonStyles';
+import { ContactContainer } from '../styles/ContainerStyles';
 import { Form, FormField, Label, Input, TextArea } from '../styles/ContactFormStyles';
 import { ErrorMessage, SuccessMessage } from '../styles/ConfirmationMessageStyles';
 
@@ -21,7 +22,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
+    <ContactContainer>
       <h1>Contact Us</h1>
       {submitted && <SuccessMessage>Form submitted successfully!</SuccessMessage>}
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -51,7 +52,7 @@ const ContactPage = () => {
 
         <Button type="submit">Submit</Button>
       </Form>
-    </div>
+    </ContactContainer>
   );
 };
 

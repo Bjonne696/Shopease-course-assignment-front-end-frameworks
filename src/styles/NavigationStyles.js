@@ -18,7 +18,7 @@ margin: 0 10px;
 `;
 
 export const NavLink = styled.a`
-color: white;
+color: #7C0A02;
 text-decoration: none;
 
 

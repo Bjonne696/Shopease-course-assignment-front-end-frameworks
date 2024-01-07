@@ -10,6 +10,7 @@ cursor: pointer;
 margin: 30px;
 
 &:hover {
-  background-color: #0056b3;
+  background-color: #90EE90;
 }
 `;
+

@@ -7,11 +7,11 @@ export const ProductsContainer = styled.div`
   grid-gap: 20px;
   padding: 20px;
 
-  @media (max-width: 768px) { // Adjust the max-width as per your requirement
+  @media (max-width: 1332px) { 
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 360px) { // Adjust the max-width as per your requirement
+  @media (max-width: 700px) { 
     grid-template-columns: repeat(1, 1fr);
   }
 `;
@@ -22,11 +22,11 @@ export const ProductTextContainer = styled.div`
 `;
 
 export const ProductImageContainer = styled.div`
-  // Add styling for the image container here
+
 `;
 
 export const ProductButtonContainer = styled.div`
-// Add styling for the button container here
+
 `;
 
 
@@ -36,7 +36,7 @@ top: 0;
 left: 0;          
 width: 100%;       
 background-color: #5CC7F6; 
-color: white;
+color: #7C0A02;
 padding: 10px 20px;
 text-align: center;
 `;
@@ -61,4 +61,47 @@ export const FooterContainer = styled.div`
 export const CartIconContainer = styled.div`
   position: relative;
   cursor: pointer;
+`;
+
+export const ProductContainer = styled.div`
+padding: 20px;
+margin-top: 80px;
+margin-bottom: 60px;
+
+
+`;
+
+export const ReviewsContainer = styled.div`
+  margin-top: 20px;
+`;
+
+export const ContactContainer = styled.div `
+margin-top: 100px
+`;
+
+
+export const CheckoutContainer = styled.div`
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 300px;
+
+  @media (max-width: 400px) {
+    max-width: 90%;
+    padding-top: 200px; 
+  }
+`;
+
+export const SuccessContainer = styled.div`
+  text-align: center;
+  padding-top: 100px; 
+  padding-bottom: 100px; 
+  margin: 0 auto;
+  max-width: 600px;
+
+  @media (max-width: 768px) {
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+  }
 `;
