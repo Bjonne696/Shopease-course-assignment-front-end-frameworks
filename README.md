@@ -24,6 +24,7 @@ ShopEase is built using a robust tech stack, ensuring a reliable and fast user e
 - [Styled Components](https://styled-components.com/) for scoped and reusable styles.
 - [React Router](https://reactrouter.com/) for seamless navigation between pages.
 - [Redux Persist](https://react-redux-firebase.com/docs/integrations/redux-persist.html) for persisting the shopping cart state across browser sessions.
+- Hosted on [Netlify](https://www.netlify.com/), ensuring optimal performance and security
 
 
 ## Getting Started
