@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ProductCard, ProductImage, SearchBar } from '../styles/HomePageStyles';
 import { StyledLink } from '../styles/LinkStyles';
 import { ProductsContainer, ProductTextContainer, ProductImageContainer, ProductButtonContainer } from '../styles/ContainerStyles';
-import { Heading, Paragraph, ProductTitle } from '../styles/TextStyles';
+import { Heading, Paragraph, ProductTitle, HiddenTag } from '../styles/TextStyles';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -27,36 +27,39 @@ const HomePage = () => {
 
   return (
     <div>
-            
-    <Heading>Welcome to ShopEase</Heading>
-    <Paragraph>This project presents the conceptualization and design of a hypothetical e-commerce website, named "ShopEase". 
-      The purpose of ShopEase is to provide a user-friendly online platform where customers can effortlessly browse and purchase a wide range of products, from electronics to clothing. 
-      The website aims to combine efficient functionality with an engaging user experience, catering to the needs of a diverse customer base.</Paragraph>
+      <Heading>Welcome to ShopEase</Heading>
+      <Paragraph>
+        This project presents the conceptualization and design of a hypothetical e-commerce website, named "ShopEase". 
+        The purpose of ShopEase is to provide a user-friendly online platform where customers can effortlessly browse and purchase a wide range of products, from electronics to clothing. 
+        The website aims to combine efficient functionality with an engaging user experience, catering to the needs of a diverse customer base.
+      </Paragraph>
 
-    <SearchBar
+      <SearchBar
         type="text"
         placeholder="Search for products..."
         value={searchTerm}
-        onChange={handleSearch}/>
+        onChange={handleSearch}
+      />
 
-  <ProductsContainer>
-    {filteredProducts.map(product => (
-    <ProductCard key={product.id}>
-      <ProductImageContainer>
-        <ProductImage src={product.imageUrl} alt={product.title} />
-      </ProductImageContainer>
-      <ProductTextContainer>
-        <ProductTitle>{product.title}</ProductTitle>
-        {product.tags.map(tag => <p key={tag}>{tag}</p>)}
-        <p>Price: ${product.price}</p>
-      </ProductTextContainer>
-      <ProductButtonContainer>
-        <StyledLink to={`/products/${product.id}`}>View Product</StyledLink>
-      </ProductButtonContainer>
-  </ProductCard>
-))}
-</ProductsContainer>
-
+      <ProductsContainer>
+        {filteredProducts.map(product => (
+          <ProductCard key={product.id}>
+            <ProductImageContainer>
+              <ProductImage src={product.imageUrl} alt={product.title} />
+            </ProductImageContainer>
+            <ProductTextContainer>
+              <ProductTitle>{product.title}</ProductTitle>
+              {product.tags.map(tag => (
+                <HiddenTag key={tag}>{tag}</HiddenTag>
+              ))}
+              <p>Price: ${product.price}</p>
+            </ProductTextContainer>
+            <ProductButtonContainer>
+              <StyledLink to={`/products/${product.id}`}>View Product</StyledLink>
+            </ProductButtonContainer>
+          </ProductCard>
+        ))}
+      </ProductsContainer>
     </div>
   );
 };
