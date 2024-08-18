@@ -27,12 +27,12 @@ export const FooterText = styled.p`
 
 export const ProductDescription = styled.p`
   font-family: becker-gothics-egyptian, sans-serif;
-  font-size: 1 rem;
+  font-size: 1.5rem;
   margin: 20px 0;
   line-height: 1.5;
 `;
 
-export const ProductTitle = styled.h2` 
+export const ProductTitle = styled.h2`
   font-family: becker-gothics-concave, sans-serif;
   font-size: 2rem;
   margin-bottom: 10px;
@@ -55,4 +55,8 @@ export const Review = styled.div`
 export const Price = styled.p`
   font-size: 1.2rem;
   margin-bottom: 10px;
+`;
+
+export const HiddenTag = styled.p`
+  display: none;
 `;

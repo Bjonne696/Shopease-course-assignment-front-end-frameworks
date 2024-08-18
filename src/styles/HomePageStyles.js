@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ProductCard = styled.div`
   background-color: #FFFA72;
   display: flex;
@@ -14,7 +13,6 @@ export const ProductCard = styled.div`
   border-radius: 10px;
   height: 500px; 
 `;
-
 
 export const ProductImage = styled.img`
   width: 100%; 
@@ -32,4 +30,3 @@ export const SearchBar = styled.input`
   padding: 10px;
   border-radius: 5px;
 `;
-
