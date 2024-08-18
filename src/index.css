@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  color: #7C0A02;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #7C0A02; /* Ensure visited links stay the same color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #7C0A02;
+}

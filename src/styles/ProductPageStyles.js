@@ -7,9 +7,12 @@ export const ProductImage = styled.img`
   margin: 0 auto;
   border-radius: 10px;
 
-  @media (max-width: 768px) {
-    max-height: 150px; // Adjust the max-height for smaller screens
+  @media (max-width: 768px) screens{
+    max-height: 150px; 
   }
-
 `;
 
+export const ProductDetails = styled.div`
+  text-align: center; 
+  margin-top: 20px;
+`;
