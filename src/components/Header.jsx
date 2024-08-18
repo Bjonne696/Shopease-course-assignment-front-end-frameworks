@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { HeaderContainer } from '../styles/ContainerStyles';
-import { Navigation, NavList, NavItem } from '../styles/NavigationStyles';
+import { Navigation, NavList, NavItem, NavLink } from '../styles/NavigationStyles';
 import CartIcon from './CartIcon';
-import { useSelector } from 'react-redux'; 
+import { useSelector } from 'react-redux';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,16 +17,18 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Navigation>
-        <h1>ShopEase</h1>
+        <NavLink to="/">
+          <h1>ShopEase</h1>
+        </NavLink>
         <NavList>
           <NavItem>
             <CartIcon itemCount={itemCount} onClick={handleCartClick} />
           </NavItem>
           <NavItem>
-            <Link to="/">ShopEase</Link>
+            <NavLink to="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/contact">Contact</NavLink>
           </NavItem>
         </NavList>
       </Navigation>

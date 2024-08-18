@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ProductCard, ProductImage, SearchBar } from '../styles/HomePageStyles';
 import { StyledLink } from '../styles/LinkStyles';
 import { ProductsContainer, ProductTextContainer, ProductImageContainer, ProductButtonContainer } from '../styles/ContainerStyles';
-import { Heading, Paragraph, ProductDescription, ProductTitle } from '../styles/TextStyles';
+import { Heading, Paragraph, ProductTitle } from '../styles/TextStyles';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -47,7 +47,6 @@ const HomePage = () => {
       </ProductImageContainer>
       <ProductTextContainer>
         <ProductTitle>{product.title}</ProductTitle>
-        <ProductDescription>{product.description}</ProductDescription>
         {product.tags.map(tag => <p key={tag}>{tag}</p>)}
         <p>Price: ${product.price}</p>
       </ProductTextContainer>
